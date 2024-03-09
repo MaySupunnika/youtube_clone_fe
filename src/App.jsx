@@ -1,9 +1,10 @@
 import React from "react";
-import Sidebar from "./components/sidebar";
+
+import LandingPage from "./pages/LandingPage";
 export default function App() {
   return (
     <>
-      <Sidebar />
+      <LandingPage />
     </>
   );
 }

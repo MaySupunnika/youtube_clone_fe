@@ -5,11 +5,12 @@ export default {
     extend: {
       fontFamily: {
         Roboto: ["Roboto"],
+        Teko: ["Teko"],
       },
       backgroundColor: {
         main: "#0F0F0F",
         white: "#FFFFFF",
-        gray: "rgba(142,145,143,0.8)",
+        gray: "rgba(142,145,143,0.2)",
       },
     },
     colors: {
@@ -17,6 +18,7 @@ export default {
       current: "currentColor",
       Red: "#CC0000",
       white: "#FFFFFF",
+      gray: "rgba(142,145,143,0.8)",
     },
   },
   plugins: [],
