@@ -1,14 +1,20 @@
 import React from "react";
 
 export default function sidebar({ hamburger }) {
+  const formatText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    }
+    return text;
+  };
   return (
     <>
       {hamburger ? (
-        <div className="bg-main w-[15rem] h-screen py-12 fixed mt-[4rem]">
+        <div className="bg-main w-[17rem] h-screen py-12 fixed mt-[4rem]">
           <div className="w-[100%] flex-col flex justify-center items-center"></div>
         </div>
       ) : (
-        <div className="bg-main w-[6.5rem] h-screen py-12 fixed mt-[4rem]">
+        <div className="bg-main w-[6rem] h-screen py-12 fixed mt-[4rem]">
           <div className="w-[100%] flex-col flex justify-center items-center">
             <div className="flex flex-col items-center mb-[0.5rem] mt-[-2rem] p-3 cursor-pointer hover:bg-gray hover:rounded-md">
               <div className="w-[1.2rem]">
@@ -35,7 +41,9 @@ export default function sidebar({ hamburger }) {
               <div className="w-[1.2rem]">
                 <img src="src/assets/play-button.png" alt="youtube-music" />
               </div>
-              <p className="text-[0.6rem] text-white mt-[5px]">YouTube Music</p>
+              <p className="text-[0.6rem] text-white mt-[5px]">
+                {formatText("YouTube Music", 10)}
+              </p>
             </div>
             <div className="flex flex-col items-center mb-[0.5rem] p-3 cursor-pointer hover:bg-gray hover:rounded-md">
               <div className="w-[1.2rem]">

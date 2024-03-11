@@ -11,6 +11,7 @@ export default {
         main: "#0F0F0F",
         white: "#FFFFFF",
         gray: "rgba(142,145,143,0.2)",
+        gray2: "rgba(142,145,143,0.4)",
       },
     },
     colors: {

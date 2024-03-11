@@ -23,12 +23,14 @@ export default function navbar() {
             <div className="w-[2rem]">
               <img src="src/assets/youtube-logo-2431.png" alt="youtube-logo" />
             </div>
-            <h3 className="text-3xl font-Teko ml-1 mt-[5px]">Premium</h3>
+            <h3 className="text-3xl font-Teko ml-1 mt-[5px] cursor-pointer">
+              Premium
+            </h3>
             <p className="absolute text-[10px] text-gray left-[13.5rem] top-[1rem]">
               TH
             </p>
           </div>
-          <div className="flex ml-[10rem] relative">
+          <div className="flex ml-[8rem] relative">
             <input
               className="w-[35rem] h-[2.5rem] rounded-full border border-[#303030] bg-[#101010] focus:outline-none pl-5"
               placeholder="Search"
@@ -48,12 +50,12 @@ export default function navbar() {
             </div>
           </button>
           <div className="flex ml-[11.7rem]">
-            <button>
+            <button className="w-[2.5rem] h-[2.5rem] rounded-full hover:bg-gray flex justify-center items-center">
               <div className="w-[1.6rem] h-[1.6rem]">
                 <img src="src/assets/video-button.png" alt="create-video" />
               </div>
             </button>
-            <button className="mx-6">
+            <button className="mx-6 w-[2.5rem] h-[2.5rem] rounded-full hover:bg-gray flex justify-center items-center">
               <div className="w-[1.6rem] h-[1.6rem]">
                 <img src="src/assets/notification.png" alt="notification" />
               </div>
