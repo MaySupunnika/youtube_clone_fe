@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import data from "../mockData";
 import Navbar from "./navbar";
+import { useNavigate } from "react-router-dom";
 export default function Feed() {
   const [selectedTag, setSelectTag] = useState("All");
   const [filterData, setFilterData] = useState(data);
+  const navigate = useNavigate();
 
   const formatViews = (view) => {
     if (view && view > 1000000) {
@@ -56,7 +58,10 @@ export default function Feed() {
       <div className="bg-main pb-[3rem] pl-[6.5rem] pr-0 flex flex-wrap gap-4 min-h-screen">
         {filterData.map((item, id) => (
           <div className="flex" key={id}>
-            <div className="flex flex-col cursor-pointer">
+            <div
+              className="flex flex-col cursor-pointer"
+              onClick={() => navigate(`/videoDetail/${id}`)}
+            >
               <div className="w-[24.3rem] h-[14rem]">
                 <img
                   src={item.img_url}

@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import Sidebar from "./sidebar";
+import { useNavbarContext } from "./navbarContext";
 
 export default function navbar() {
-  const [hamburger, setHamburger] = useState(false);
+  // const [hamburger, setHamburger] = useState(false);
 
-  const onClickHamburger = () => {
-    setHamburger(!hamburger);
-  };
+  // const onClickHamburger = () => {
+  //   setHamburger(!hamburger);
+  // };
+
+  const { toggleHamburger } = useNavbarContext();
   return (
     <>
       <div className="flex w-screen h-[4.3rem] bg-main justify-between items-center px-[2rem] fixed">
         <div className="flex justify-between items-center">
           <div
             className="flex-col flex items-center justify-center cursor-pointer w-[3rem] h-[3rem] rounded-full hover:bg-gray"
-            onClick={onClickHamburger}
+            onClick={toggleHamburger}
           >
             <div className="w-[1.3rem] h-[1px] bg-white mb-[4px]"></div>
             <div className="w-[1.3rem] h-[1px] bg-white mb-[4px]"></div>
@@ -72,7 +75,8 @@ export default function navbar() {
           </div>
         </div>
       </div>
-      <Sidebar hamburger={hamburger} />
+      {/* <Sidebar hamburger={hamburger} /> */}
+      <Sidebar />
     </>
   );
 }
